@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import MyStockItem from "./MyStockItem";
 
-const MyStocksList = ({stocks, handleStockSelect, userDetails, send})  => {
+const MyStocksList = ({stocks, handleStockSelect, userDetails, send, removeStockFromUser})  => {
   
     const stockItems = stocks.map((stock, index) => {
-        return <MyStockItem stock={stock} key={index} index={index} handleStockSelect={handleStockSelect} userDetails={userDetails} />
+        return <MyStockItem stock={stock} key={index} index={index} handleStockSelect={handleStockSelect} userDetails={userDetails} removeStockFromUser={removeStockFromUser}/>
     });
 
     //TOTAL PORTFOLIO VALUE

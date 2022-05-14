@@ -20,6 +20,12 @@ const MyStockContainer = ({stockToAdd}) => {
     const [ticker, setTicker] = useState(null)
     const [pieData, setPieData] = useState(null)
 
+    useEffect(() => {
+        fetchDB()
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 2000)
+    }, [])
 
 
     useEffect(() => {
@@ -35,13 +41,24 @@ const MyStockContainer = ({stockToAdd}) => {
         .then(()=> fetchDB()) 
     }
 
-
-    useEffect(() => {
-        fetchDB()
+    const removeStockFromUser = (stockTicker) => {
+        const temp = {...userDetails[0]}
+        let newArray = [];
+        for (let i=0; i<temp.stocksHeld.length; i++){
+            if (temp.stocksHeld[i].stock === stockTicker){
+                console.log(temp.stocksHeld[i].stock);
+                newArray = temp.stocksHeld.splice(i, 1);
+            }
+        }
+        
+        setIsLoading(true);
+        StockService.updateUserDetails(temp)
+        .then(() => fetchDB())
         setTimeout(() => {
             setIsLoading(false)
         }, 2000)
-    }, [])
+        
+    }
 
     const fetchDB = function() {
         fetch('http://localhost:9000/api/userStocks/')
@@ -107,7 +124,7 @@ const MyStockContainer = ({stockToAdd}) => {
             <div className="my-stocks-container-box">
             <div className="my-stocks-left">
 
-                {loading === true ? <PulseLoader className="loader" /> : <MyStocksList stocks={myStockObjectList} handleStockSelect={handleStockSelect} userDetails={userDetails} send={send}/>}
+                {loading === true ? <PulseLoader className="loader" /> : <MyStocksList removeStockFromUser={removeStockFromUser} stocks={myStockObjectList} handleStockSelect={handleStockSelect} userDetails={userDetails} send={send}/>}
             </div>
             <div className="my-stocks-right">
                 {selectedStock !== null ? <MyStockItemsGraph selectedStock={selectedStock} ticker={ticker} /> : null}
