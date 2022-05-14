@@ -1,5 +1,11 @@
+import React from "react";
+import {useState} from 'react';
+import ConfirmDelete from "./ConfirmDelete";
+
 
 const MyStockItem = ({stock, index, handleStockSelect, userDetails, removeStockFromUser}) => {
+
+    const [isConfirm, setIsConfirm] = useState("false");
 
     const handleClick = () => {
         handleStockSelect(index)
@@ -17,9 +23,19 @@ const MyStockItem = ({stock, index, handleStockSelect, userDetails, removeStockF
     const loss = (numberHeld * currentPrice) - (buyPrice * numberHeld)
     const lossToShow = loss.toLocaleString("en-US", {style:"currency", currency:"USD"});
 
-    const handleRemove = (evt) => {
+
+    const handleFirstRemoveClick = () => {
+        setIsConfirm("true");
+    }
+
+    const handleRemoveConfirm = (option) => {
         // console.log(evt.target.value);
-        removeStockFromUser(evt.target.value);
+        if (option === "yes"){
+            removeStockFromUser(stock.meta.symbol);
+        } else{
+            setIsConfirm("false")
+        }
+        
     }
 
     
@@ -33,8 +49,10 @@ const MyStockItem = ({stock, index, handleStockSelect, userDetails, removeStockF
                 <td>{newHoldingValue}</td>
                 <td>{newBuyPrice}</td>
                 {(numberHeld * currentPrice) - (buyPrice * numberHeld) > 0 ? <td className="green">{profitToShow}</td> : <td className="red">{lossToShow}</td>}
-                <button onClick={handleRemove} value={stock.meta.symbol}>Remove</button>
+                <button className="delete" onClick={handleFirstRemoveClick} value={stock.meta.symbol}>Remove</button>
+               
             </tr>
+            {isConfirm === "true" ? <ConfirmDelete handleRemoveConfirm = {handleRemoveConfirm} Box /> : null}
         </>
     )
 }

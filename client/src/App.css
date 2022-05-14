@@ -122,8 +122,12 @@
 td{
   padding:0.25rem;
   text-align:center;
-  background-color:rgb(239, 241, 241);
+  
   font-size:0.75rem;
+}
+
+tr{
+  background-color:rgb(239, 241, 241);
 }
 
 .red{
@@ -138,6 +142,10 @@ th, td, table {
   border: 1px solid black;
   border-collapse:collapse;
   margin: 0px;
+}
+
+.table > tr:hover{
+  background-color:rgb(182, 213, 241);
 }
 
 .stock-symbol{
@@ -180,7 +188,7 @@ th, td, table {
 
 .buttons > button{
   padding:0.2rem;
-  margin-left:0.8rem;
+  margin:0.5rem;
   width:60px;
   background-color:rgb(113, 95, 218);
   border-radius:5px;
@@ -205,10 +213,54 @@ th, td, table {
   
 }
 
+.buttons > .delete-confirm{
+  padding:0.2rem;
+  margin:0.5rem;
+  width:60px;
+  background-color:rgb(229, 78, 52);
+  border-radius:5px;
+  color:white;
+  margin-top:0.8rem;
+}
 
+.buttons > .delete-confirm:hover{
+  background-color:rgb(255, 0, 0);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  padding:0.2rem;
+}
 
+.delete {
+  padding:0.2rem;
+  margin:0.5rem;
+  width:60px;
+  background-color:rgb(229, 78, 52);
+  border-radius:5px;
+  color:white;
+  margin-top:0.8rem;
+}
 
+.delete:hover{
+  background-color:rgb(255, 0, 0);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  padding:0.2rem;
+}
 
+.confirm-delete-container{
+  position:absolute;
+  background:rgb(10, 4, 4);
+  color:white;
+  top:100;
+  padding:1rem;
+  display:flex;
+  flex-wrap:wrap;
+  width:200px;
+  border:2px solid red;
+  border-radius:5px;
+}
 
 .search-container{
   display:flex;

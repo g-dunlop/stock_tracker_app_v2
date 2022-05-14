@@ -24,7 +24,7 @@ const MyStockContainer = ({stockToAdd}) => {
         fetchDB()
         setTimeout(() => {
             setIsLoading(false)
-        }, 2000)
+        }, 1000)
     }, [])
 
 
@@ -56,7 +56,7 @@ const MyStockContainer = ({stockToAdd}) => {
         .then(() => fetchDB())
         setTimeout(() => {
             setIsLoading(false)
-        }, 2000)
+        }, 1000)
         
     }
 
