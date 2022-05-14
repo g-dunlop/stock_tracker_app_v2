@@ -51,11 +51,8 @@
   /* display:flex; */
   width:97%;
   grid-area:stocks-container;
-  height: 75vh;
+  height: auto;
 }
-
-
-
 
 .my-stocks-container-box{
   display:flex;
@@ -69,25 +66,23 @@
 
 .my-stocks-left{
   flex:40%;
-  height:50vh;
+  height:auto;
   border-radius:5px;
   margin-right:5px;
   display:flex;
   justify-content:center;
-  
   overflow-y: scroll;
 }
 
 .my-stocks-left > h2{
   margin:0;
- 
 }
 
 .my-stocks-right{
   border: 2px solid black;
   border-radius:5px;
   flex:40%;
-  height:55vh;
+  height:auto;
   margin-left:5px;
   padding-top:1rem;
 }
@@ -136,6 +131,7 @@ td{
 .green{
   color:green;
 }
+
 th, td, table {
   border: 1px solid black;
   border-collapse:collapse;
