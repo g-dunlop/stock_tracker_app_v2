@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import MyStocksList from '../components/MyStocks/MyStocksList';
 import StockService from '../services/StockServices';
 import MyPieChart from '../components/MyStocks/MyPieChart';
+import MyStockNews from '../components/MyStocks/MyStockNews';
 
 import {css} from '@emotion/react';
 // import ClipLoader from 'react-spinners/ClipLoader';
@@ -19,9 +20,11 @@ const MyStockContainer = ({stockToAdd}) => {
     const [selectedStock, setSelectedStock] = useState(null)
     const [ticker, setTicker] = useState(null)
     const [pieData, setPieData] = useState(null)
+    const [newsData, setNewsData] = useState([])
 
     useEffect(() => {
         fetchDB()
+        
         setTimeout(() => {
             setIsLoading(false)
         }, 1000)
@@ -66,6 +69,12 @@ const MyStockContainer = ({stockToAdd}) => {
         .then(data => setUserDetails(data))
     }
 
+    const fetchNews = function(ticker) {
+        fetch(`https://api.marketaux.com/v1/news/all?symbols=${ticker}&filter_entities=true&language=en&api_token=VVaG4obPuvnKKh0Vu1VoTwMft87Fk3yC0UR2O4wy`)
+        .then(res=> res.json())
+        .then(data => setNewsData(data.data))
+    }
+
     useEffect(() => {
         if (userDetails !== null){
             tickerMap()
@@ -82,6 +91,7 @@ const MyStockContainer = ({stockToAdd}) => {
     useEffect(() => {
         if (myStockSearchTerms.length > 0){
             fetchMyStockObj(myStockSearchTerms);
+            // fetchNews(myStockSearchTerms)
         }
     }, [myStockSearchTerms])
 
@@ -111,6 +121,7 @@ const MyStockContainer = ({stockToAdd}) => {
         const selectStock = myStockObjectList[index]
         setSelectedStock(selectStock)
         setTicker(selectStock.meta.symbol)
+        fetchNews(selectStock.meta.symbol)
         setPieData(null)
     }
 
@@ -130,6 +141,9 @@ const MyStockContainer = ({stockToAdd}) => {
                 {selectedStock !== null ? <MyStockItemsGraph selectedStock={selectedStock} ticker={ticker} /> : null}
                 {pieData !== null ? <MyPieChart pieData={pieData}/>: null}
             </div>
+            </div>
+            <div className="my-stock-news-container">
+                {selectedStock!==null ? <MyStockNews newsData={newsData} ticker={ticker} /> : null}
             </div>
         </div>
     )
