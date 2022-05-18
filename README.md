@@ -9,6 +9,7 @@
   <li>I've adjusted some of the CSS, including heights for the containers, hover effects on the stocks table, and some background colors</li>
   <li>There is now a 'confirm delete' component so that the user cannot alter their portoflio on just one click</li>
   <li>When you click on a stock, there is a news section drawing from marketaux API for recent articles linked to the specific stock</li>
+  <li>I also added a second type of chart so the user can switch instantly between analytical tools</li>
 
 <h2>Tools</h2>
 <ul>
