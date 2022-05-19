@@ -12,7 +12,8 @@ const SearchResult = ({result, addStock}) => {
         const stockToAdd = {
             stock: result.symbol,
             noHeld: parseFloat(stockNumber),
-            buyPrice: parseFloat(buyPrice)
+            buyPrice: parseFloat(buyPrice),
+            notes:""
         }
         addStock(stockToAdd)
         setStockNumber("")

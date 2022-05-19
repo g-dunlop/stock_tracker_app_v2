@@ -46,6 +46,11 @@ const MyStockItemsGraph = ({selectedStock, ticker}) => {
         } 
         }, [myStockData, chartType] )
 
+        let textInput = null;
+  useEffect(()=>{
+    textInput.focus();
+  }, [chartType])
+
 
         //this function to make line chart
     const makeLineChart = () => {
@@ -153,7 +158,7 @@ const MyStockItemsGraph = ({selectedStock, ticker}) => {
 
     return(
         <div className="my-stock-items-graph">
-            <div className="buttons">
+            <div className="chart-buttons">
                 <button onClick={handleTypeClick} value="line">Line</button>
                 <button onClick={handleTypeClick} value="candle">Candle</button>
               
@@ -173,7 +178,7 @@ const MyStockItemsGraph = ({selectedStock, ticker}) => {
                 <button onClick={handleClick} value="1h">Hourly</button>
                 <button onClick={handleClick} value="1day">Daily</button>
                 <button onClick={handleClick} value="1week">Weekly</button>
-                <button onClick={handleClick} value="1month">Monthly</button>
+                <button ref={(button) => { textInput = button; }} onClick={handleClick} value="1month">Monthly</button>
             </div>
             {chartType === "line" && lineData !== null  ? <HighchartsReact containerProps={{ style: { height: "100%" } }} highcharts={Highcharts} constructor-type={'stockChart'} options={optionsLine}/> :null}
             {candleData !== null && chartType === "candle" ? <HighchartsReact containerProps={{ style: { height: "100%" } }} highcharts={Highcharts} constructor-type={'stockChart'} options={optionsCandle}/> :null}

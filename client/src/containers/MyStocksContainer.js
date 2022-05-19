@@ -21,13 +21,14 @@ const MyStockContainer = ({stockToAdd}) => {
     const [ticker, setTicker] = useState(null)
     const [pieData, setPieData] = useState(null)
     const [newsData, setNewsData] = useState([])
+    const [stockToBeUpdated, setStockToUpdate] = useState(null)
 
     useEffect(() => {
         fetchDB()
         
         setTimeout(() => {
             setIsLoading(false)
-        }, 1000)
+        }, 1500)
     }, [])
 
 
@@ -43,6 +44,23 @@ const MyStockContainer = ({stockToAdd}) => {
         StockService.updateUserDetails(temp)
         .then(()=> fetchDB()) 
     }
+
+    const updateStock = function (stockToUpdate){
+        setStockToUpdate(stockToUpdate)
+        console.log(stockToUpdate)
+        const temp = {...userDetails[0]}
+        console.log(stockToUpdate)
+        for (let i=0; i<temp.stocksHeld.length; i++){
+            if (temp.stocksHeld[i].stock === stockToUpdate.stock){
+                temp.stocksHeld[i].notes = stockToUpdate.notes
+            }
+        }
+        // temp.stocksHeld.push(stockToUpdate)
+        console.log(temp)
+        StockService.updateUserDetails(temp)
+        // .then(()=> fetchDB()) 
+    }
+
 
     const removeStockFromUser = (stockTicker) => {
         const temp = {...userDetails[0]}
@@ -135,7 +153,7 @@ const MyStockContainer = ({stockToAdd}) => {
             <div className="my-stocks-container-box">
             <div className="my-stocks-left">
 
-                {loading === true ? <PulseLoader className="loader" /> : <MyStocksList removeStockFromUser={removeStockFromUser} stocks={myStockObjectList} handleStockSelect={handleStockSelect} userDetails={userDetails} send={send}/>}
+                {loading === true ? <PulseLoader className="loader" /> : <MyStocksList updateStock={updateStock} removeStockFromUser={removeStockFromUser} stocks={myStockObjectList} handleStockSelect={handleStockSelect} userDetails={userDetails} send={send}/>}
             </div>
             <div className="my-stocks-right">
                 {selectedStock !== null ? <MyStockItemsGraph selectedStock={selectedStock} ticker={ticker} /> : null}

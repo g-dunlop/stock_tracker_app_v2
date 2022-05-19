@@ -9,17 +9,20 @@ db.userStocks.insertMany([
         stocksHeld: [{
             stock: "AAPL",
             noHeld: 100,
-            buyPrice: 105.24
+            buyPrice: 105.24,
+            notes: ""
         },
         {
             stock: "GOOG",
             noHeld: 100,
-            buyPrice: 2253.7
+            buyPrice: 2253.7,
+            notes: ""
         },
         {    
         stock: "TSLA",
         noHeld: 100,
-        buyPrice:1000.53
+        buyPrice:1000.53,
+        notes:""
     }]
     }
     // {

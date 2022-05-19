@@ -15,7 +15,6 @@
     'stocks-container stocks-container'
     'external-stocks-container external-stocks-container'
     'footer footer';
-
 }
 
 .header {
@@ -81,13 +80,13 @@
 }
 
 .my-stocks-right{
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius:5px;
   flex:40%;
   
   height:auto;
   /* margin-left:5px; */
-  padding-top:1rem;
+  /* padding-top:1rem; */
 }
 
 .my-stocks-list > h2{
@@ -191,6 +190,36 @@ th, td, table {
   margin:0.2rem;
 }
 
+.chart-buttons{
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  width:100%;
+  margin:0.2rem;
+}
+
+.chart-buttons > button{
+  padding:0.2rem;
+  margin:0.5rem;
+  width:50px;
+  background-color:rgb(14, 8, 49);
+  border-radius:5px;
+  color:white;
+  margin-top:0.8rem;
+  font-size:0.5rem;
+}
+
+.chart-buttons > button:hover{
+  background-color:rgba(114, 95, 218, 0.329);
+  color:black;
+  cursor:pointer;
+}
+
+.chart-buttons > button:focus{
+  background-color:rgba(114, 95, 218, 0.329);
+  color:black;
+}
+
 .buttons > button{
   padding:0.2rem;
   margin:0.5rem;
@@ -200,6 +229,8 @@ th, td, table {
   color:white;
   margin-top:0.8rem;
 }
+
+
 
 .buttons > button:hover{
   background-color:rgba(114, 95, 218, 0.329);
@@ -215,7 +246,6 @@ th, td, table {
   padding:1rem;
   grid-area: external-stocks-container;
   background-color:rgb(50, 53, 71);
-  
 }
 
 .buttons > .delete-confirm{
@@ -234,6 +264,10 @@ th, td, table {
   font-weight:bold;
   cursor:pointer;
   padding:0.2rem;
+}
+
+.table-buttons{
+  display:flex;
 }
 
 .delete {
@@ -266,6 +300,38 @@ th, td, table {
   border:2px solid rgb(15, 3, 83);
   border-radius:5px;
 }
+
+.stock-notes-container{
+  position:absolute;
+  background-color:rgb(239, 237, 112);
+  width:200px;
+  height:200px;
+  z-index:1;
+  border: 1px solid black;
+  border-radius:5px; 
+}
+
+.stock-notes-container > h3{
+  margin:0;
+  text-align:center;
+  padding-top:0.5rem;
+}
+
+.stock-notes-container > input{
+  width:190px;
+  height:100px;
+  background-color:rgb(239, 237, 112);
+  border:none;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.notes-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+}
+
+
 
 .search-container{
   display:flex;

@@ -1,11 +1,14 @@
 import React from "react";
 import {useState} from 'react';
 import ConfirmDelete from "./ConfirmDelete";
+import StockNotes from "./StockNotes";
+import Notes from '../../static/notes-icon.png';
 
 
-const MyStockItem = ({stock, index, handleStockSelect, userDetails, removeStockFromUser}) => {
+const MyStockItem = ({stock, index, handleStockSelect, userDetails, removeStockFromUser, updateStock}) => {
 
     const [isConfirm, setIsConfirm] = useState("false");
+    const [isNotes, setIsNotes] = useState(false);
 
     const handleClick = () => {
         handleStockSelect(index)
@@ -35,9 +38,11 @@ const MyStockItem = ({stock, index, handleStockSelect, userDetails, removeStockF
         } else{
             setIsConfirm("false")
         }
-        
     }
 
+    const handleNotesClick = (evt) => {
+        setIsNotes(!isNotes)
+    }
     
 
     return(
@@ -49,7 +54,11 @@ const MyStockItem = ({stock, index, handleStockSelect, userDetails, removeStockF
                 <td>{newHoldingValue}</td>
                 <td>{newBuyPrice}</td>
                 {(numberHeld * currentPrice) - (buyPrice * numberHeld) > 0 ? <td className="green">{profitToShow}</td> : <td className="red">{lossToShow}</td>}
-                <button className="delete" onClick={handleFirstRemoveClick} value={stock.meta.symbol}>Remove</button>
+                <div className="table-buttons">
+                    <button className="notes" onClick={handleNotesClick}><img src={Notes} height="33px" width="40px" /></button>
+                    {isNotes ? <StockNotes stock={stock} handleNotesClick={handleNotesClick} userDetails={userDetails} index={index} updateStock={updateStock} /> : null}
+                    <button className="delete" onClick={handleFirstRemoveClick} value={stock.meta.symbol}>Remove</button>
+                </div>
                
             </tr>
             {isConfirm === "true" ? <ConfirmDelete handleRemoveConfirm = {handleRemoveConfirm} Box /> : null}
