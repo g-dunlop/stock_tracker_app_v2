@@ -3,13 +3,14 @@
 
 <h2>About</h2>
 <p>This was a 6-day group project completed during week 10 of the CodeClan course by Jacob, Christian and Jacob.</p>
-<p>Following the end of the 6-day project, I found some time later in the course to go back and re-factor a few things:</p>
+<p>Following the end of the 6-day project(original repo here: https://github.com/xboyjx/w10_stocks_project), I found some time later in the course to go back and re-factor a few things:</p>
 <ul>
   <li>The delete stock function now works after adding a loading time interval</li>
   <li>I've adjusted some of the CSS, including heights for the containers, hover effects on the stocks table, and some background colors</li>
   <li>There is now a 'confirm delete' component so that the user cannot alter their portoflio on just one click</li>
   <li>When you click on a stock, there is a news section drawing from marketaux API for recent articles linked to the specific stock</li>
   <li>I also added a second type of chart so the user can switch instantly between analytical tools</li>
+  <li>The user can now add some notes on each stock while analysing</li>
 
 <h2>Tools</h2>
 <ul>
