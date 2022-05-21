@@ -28,7 +28,7 @@ const MyStockContainer = ({stockToAdd}) => {
         
         setTimeout(() => {
             setIsLoading(false)
-        }, 1500)
+        }, 1000)
     }, [])
 
 

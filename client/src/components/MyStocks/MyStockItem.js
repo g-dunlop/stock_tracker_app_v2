@@ -3,6 +3,7 @@ import {useState} from 'react';
 import ConfirmDelete from "./ConfirmDelete";
 import StockNotes from "./StockNotes";
 import Notes from '../../static/notes-icon.png';
+import Delete from '../../static/delete.png';
 
 
 const MyStockItem = ({stock, index, handleStockSelect, userDetails, removeStockFromUser, updateStock}) => {
@@ -57,7 +58,7 @@ const MyStockItem = ({stock, index, handleStockSelect, userDetails, removeStockF
                 <div className="table-buttons">
                     <button className="notes" onClick={handleNotesClick}><img src={Notes} height="33px" width="40px" /></button>
                     {isNotes ? <StockNotes stock={stock} handleNotesClick={handleNotesClick} userDetails={userDetails} index={index} updateStock={updateStock} /> : null}
-                    <button className="delete" onClick={handleFirstRemoveClick} value={stock.meta.symbol}>Remove</button>
+                    <button className="" onClick={handleFirstRemoveClick} value={stock.meta.symbol}><img src={Delete} height="33px" width="40px"/></button>
                 </div>
                
             </tr>
