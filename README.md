@@ -11,6 +11,7 @@
   <li>When you click on a stock, there is a news section drawing from marketaux API for recent articles linked to the specific stock</li>
   <li>I also added a second type of chart so the user can switch instantly between analytical tools</li>
   <li>The user can now add some notes on each stock while analysing</li>
+ </ul>
 
 <h2>Tools</h2>
 <ul>
