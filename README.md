@@ -53,13 +53,16 @@
   <p>The below images demonstrate some of our planning for the MVP stage of the project.  We made use of: Class and Object Diagrams, Wireframes, Trello and a MSCW board.
  
  
-
-
-
-
-  
-
-    
+ <table>
+   <tr>
+    <td>
+      <img width="1011" alt="Screenshot 2022-05-08 at 11 23 15" src="https://user-images.githubusercontent.com/88304522/167291915-f408c437-1b53-4e43-987d-df69be782ae7.png">
+    </td>
+    <td>
+        <img width="1011" alt="P3-1  Project Planning - Trelo" src="https://user-images.githubusercontent.com/88304522/167291804-6b9ddce3-e88b-4871-bbcf-8b6a028891f9.png">
+    </td>
+   </tr>
+   
    <tr>
     <td>
         <img width="1011" alt="P3-3  Project Planning - Node Tree" src="https://user-images.githubusercontent.com/88304522/167291815-9627a71b-0f31-40ba-a4c3-2d7cb2c2a887.png">
