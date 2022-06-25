@@ -48,7 +48,7 @@
   </ul>
 
 
- <h4>Planning</h4>
+ <h2>Planning</h2>
   <p>The below images demonstrate some of my planning for the MVP stage of the project.  I made use of: Class and Object Diagrams, Wireframes, a Db Table Diagram, a MSCW board and a useCase Diagram.
  
  
