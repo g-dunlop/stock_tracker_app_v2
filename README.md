@@ -12,6 +12,28 @@
   <li>I also added a second type of chart so the user can switch instantly between analytical tools</li>
   <li>The user can now add some notes on each stock while analysing</li>
  </ul>
+ 
+ <h2>Screenshots</h2>
+  <p>For a short video preview of the app, please visit my  <a href="https://g-dunlop.github.io/g-dunlop-portfolio-website/">portfolio site</a>:
+  <table>
+   <tr>
+    <td>
+      <img width="1280" alt="StockTracker_1" src="https://user-images.githubusercontent.com/88304522/167291966-422117b0-c7f1-4771-bf61-391b430d878a.png">
+    </td>
+    <td>
+        <img width="1280" alt="StockTracker_2" src="https://user-images.githubusercontent.com/88304522/167291970-87a0ba87-8228-4610-a476-661eddb17ecb.png">
+    </td>
+   </tr>
+    
+   <tr>
+    <td>
+        <img width="1280" alt="StockTracker_3" src="https://user-images.githubusercontent.com/88304522/167291973-c8821aa3-fd2c-4c39-bbe0-38d9222c735a.png">
+    </td>
+    <td>
+       <img width="1280" alt="StockTracker_4" src="https://user-images.githubusercontent.com/88304522/167291978-b26272c6-06bc-47c9-ad23-bfe7a925f635.png">
+    </td>
+   </tr>
+  </table>
 
 <h2>Tools</h2>
 <ul>
@@ -73,27 +95,7 @@
    </tr>
   </table>
   
-  <h2>Screenshots</h2>
-  <p>For a short video preview of the app, please visit my  <a href="https://g-dunlop.github.io/g-dunlop-portfolio-website/">portfolio site</a>:
-  <table>
-   <tr>
-    <td>
-      <img width="1280" alt="StockTracker_1" src="https://user-images.githubusercontent.com/88304522/167291966-422117b0-c7f1-4771-bf61-391b430d878a.png">
-    </td>
-    <td>
-        <img width="1280" alt="StockTracker_2" src="https://user-images.githubusercontent.com/88304522/167291970-87a0ba87-8228-4610-a476-661eddb17ecb.png">
-    </td>
-   </tr>
-    
-   <tr>
-    <td>
-        <img width="1280" alt="StockTracker_3" src="https://user-images.githubusercontent.com/88304522/167291973-c8821aa3-fd2c-4c39-bbe0-38d9222c735a.png">
-    </td>
-    <td>
-       <img width="1280" alt="StockTracker_4" src="https://user-images.githubusercontent.com/88304522/167291978-b26272c6-06bc-47c9-ad23-bfe7a925f635.png">
-    </td>
-   </tr>
-  </table>
+  
 
 <h2>How to Run</h2>
 <ul>
