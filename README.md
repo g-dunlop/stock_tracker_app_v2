@@ -74,7 +74,7 @@
   </table>
   
   <h2>Screenshots</h2>
-  
+  <p>For a short video preview of the app, please visit my  <a href="https://g-dunlop.github.io/g-dunlop-portfolio-website/">portfolio site</a>:
   <table>
    <tr>
     <td>
