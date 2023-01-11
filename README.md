@@ -1,6 +1,7 @@
 
 # Stock Tracker App
 
+<section class="section about">
 <h2 class="h2">About</h2>
 <p class="p">This was a 6-day group project completed during week 10 of the CodeClan course by Jacob, Christian and Jacob.</p>
 <p class="p">Following the end of the 6-day project(original repo here: https://github.com/xboyjx/w10_stocks_project), I found some time later in the course to go back and re-factor a few things:</p>
@@ -12,9 +13,10 @@
   <li class="li">I also added a second type of chart so the user can switch instantly between analytical tools</li>
   <li class="li">The user can now add some notes on each stock while analysing</li>
  </ul>
+  </section>
  
+ <section class="section screenshots">
  <h2 class="h2">Screenshots</h2>
-  <p class="p">For a short video preview of the app, please visit my  <a href="https://g-dunlop.github.io/g-dunlop-portfolio-website/">portfolio site</a>:
   <table class="table">
    <tr class="tr">
     <td class="td">
@@ -34,7 +36,9 @@
     </td>
    </tr>
   </table>
-
+  </section>
+  
+ <section class="section tools">
 <h2 class="h2">Tools</h2>
 <ul class="ul">
   <li class="li">Node.js</li>
@@ -44,12 +48,13 @@
   <li class="li">External APIs</li>
   <li class="li">Git</li>
  </ul>
+</section>
 
-
- 
+ <section class="section brief">
 <h2 class="h2">Project Brief</h2>
 <p class="p">A local trader has come to you with a portfolio of shares. She wants to be able to analyse it more effectively. She has a small sample data set to give you and would like you to build a Minimum Viable Product that uses the data to display her portfolio so that she can make better decisions.</p>
 
+  <section class="section mvp">
 <h4 class="h4">MVP</h4>
   <ul class="ul">
     <li class="li">A user should be able to:
@@ -62,15 +67,18 @@
       </ul>
     </li>
    </ul>
+  </section>
 
+  <section class="section about">
 <h4 class="h4">Possible Extensions</h4>
   <ul class="ul">
   <li class="li">A user can remove shares from her portfolio </li>
   <li class="li">Stock predictions/ trend speculation</li>
   <li class="li">Authentication/ login</li>
   </ul>
+  </section>
 
-
+  <section class="section planning">
  <h2 class="h2">Planning</h2>
   <p class="p">The below images demonstrate some of our planning for the MVP stage of the project.  We made use of: Class and Object Diagrams, Wireframes, Trello and a MSCW board.
  
@@ -94,9 +102,10 @@
     </td>
    </tr>
   </table>
+  </section>
+  </section>
   
-  
-
+<section class="section how-to-run">
 <h2 class="h2">How to Run</h2>
 <ul class="ul">
   <li class=li">Fork the repository and then clone it clone to local computer</li>
@@ -115,7 +124,9 @@
   <li class="li">npm install</li>
       <li>npm start</li>
  </ul>
+ </section>
  
+ <section class="section learned">
  <h2 class="h2">What we learned</h2>
 <ul class="ul">
   <li class="li">Git - this was the first time working on a project in a team, and we’d just been introduced to using different branches and merging.  It wasn’t without its issues, but overall we made effective use of branches and pull requests while working independently on components and features.</li>
@@ -124,11 +135,14 @@
   <li class="li">Take time, don’t let code runaway - Due to the short timeframe for the project, we prioritised working code over clear and DRY code, meaning it’s hard work to navigate the code as it currently stands. </li>
   <li class="li">Charts - This is here as an example of having something we don’t know anything about, in this case the highcharts library, getting stuck in and being able to use it effectively.  Simple, but no doubt this will be a vital tool in our learning moving forward.</li>
  </ul>
+</section>
 
+<section class="section about">
  <h2 class="h2">What we would do differently</h2>
 <ul class="ul">
   <li class="li">We still haven’t managed to get the delete stock function to render the updated list to the page without crashing the page.</li>
   <li class="li">More data for the user - the app is currently very limited in terms of analytical tools.</li>
   <li class="li">Setting up the login page to allow for different users.</li>
 </ul>
+</section>
  
