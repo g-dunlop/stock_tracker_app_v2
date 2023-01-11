@@ -1,7 +1,7 @@
 
 # Stock Tracker App
 
-<h2>About</h2>
+<h2 class="header">About</h2>
 <p>This was a 6-day group project completed during week 10 of the CodeClan course by Jacob, Christian and Jacob.</p>
 <p>Following the end of the 6-day project(original repo here: https://github.com/xboyjx/w10_stocks_project), I found some time later in the course to go back and re-factor a few things:</p>
 <ul>
