@@ -53,7 +53,7 @@
 <h4 class="h4">MVP</h4>
   <ul class="ul">
     <li class="li">A user should be able to:
-      <ul class="h2">
+      <ul class="ul">
         <li class="li">View total current value. </li>
         <li class="li">View individual trends.</li>
         <li class="li">Retrieve a list of share prices from an external API and allow the user to add shares to her portfolio. </li>
