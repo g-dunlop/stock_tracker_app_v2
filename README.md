@@ -20,7 +20,7 @@
     <td class="td">
       <img class="img" width="1280" alt="StockTracker_1" src="https://user-images.githubusercontent.com/88304522/167291966-422117b0-c7f1-4771-bf61-391b430d878a.png">
     </td>
-    <td class="table">
+    <td class="td">
         <img class="img" width="1280" alt="StockTracker_2" src="https://user-images.githubusercontent.com/88304522/167291970-87a0ba87-8228-4610-a476-661eddb17ecb.png">
     </td>
    </tr>
