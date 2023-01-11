@@ -28,7 +28,7 @@
    </tr>
     
    <tr class="tr">
-    <t class="td">
+    <td class="td">
         <img class="img" width="1280" alt="StockTracker_3" src="https://user-images.githubusercontent.com/88304522/167291973-c8821aa3-fd2c-4c39-bbe0-38d9222c735a.png">
     </td>
     <td class="td">
